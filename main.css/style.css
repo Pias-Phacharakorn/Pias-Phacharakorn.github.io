@@ -275,3 +275,20 @@ p, ul, h1, h5 {
 .card .row {
     align-items: center;
 }
+
+.social-icons {
+    list-style-type: none;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+

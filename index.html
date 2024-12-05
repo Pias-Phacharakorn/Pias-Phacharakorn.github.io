@@ -18,14 +18,13 @@
                     class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
                 <h1>GaLaTiCose</h1>
                 <p>Bim Engineer | Bim Coordinator</p>
+                <p><strong>Email:</strong> pias.phacharakorn@gmail.com</p>
                 <div class="button-container">
                     <a href="https://drive.google.com/file/d/1dvwz5Hd7xTHSao-Ymxwobs-y1o05aMQk/view?usp=drive_link" target="_blank"
                         class="btn btn-outline-dark btn-rounded">Resume</a>
                     <a href="https://drive.google.com/file/d/13XV0Ev78vdRschysEcLoulDzoHoE3y48/view?usp=drive_link" target="_blank"
                         class="btn btn-outline-dark btn-rounded">CV</a>
                 </div>
-    
-                <!-- Right Side - Hard Skill -->
                 <hr>
                 <p><strong>BIM Software</strong><br> Revit, Dynamo, Navisworks, AutoCAD</p>
                 <p><strong>Microsoft Software</strong><br> Power BI, Excel, Word, Powerpoint</p>
@@ -139,7 +138,7 @@
                     <div class="nav nav-tabs" role="tablist">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" data-categoery="showall">
-                                <button class="nav-link" >Showall</button>
+                                <button class="nav-link" >All</button>
                             </li>
                             <li class="nav-item" data-categoery="bim">
                                 <button class="nav-link" >Bim</button>
@@ -262,6 +261,25 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Enneüs Heermabrug bridge modelling</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni, reiciendis provident quos repellendus dolorum in quidem ab illum aperiam!</p>
+                                    <a href="https://github.com/ishank-dev/Dyslexic-Reader" target="_blank"
+                                        class="btn btn-outline-dark btn-p">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7: Google Sheet Export Mutiple PDF -->
+                    <div class="card mb-3" data-categoery="coding-script">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <a href="https://github.com/ishank-dev/Dyslexic-Reader" target="_blank">
+                                    <img src="/Image/GoogleSheetExportPDF.jpg"
+                                        class="img-fluid rounded-start" alt="Google Sheet Export Mutiple PDF">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Google Sheet Export Mutiple PDF</h5>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni, reiciendis provident quos repellendus dolorum in quidem ab illum aperiam!</p>
                                     <a href="https://github.com/ishank-dev/Dyslexic-Reader" target="_blank"
                                         class="btn btn-outline-dark btn-p">View Project</a>
@@ -405,26 +423,44 @@
         document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Java Script for filter projects-->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterButtons = document.querySelectorAll('.nav-item');
             const projects = document.querySelectorAll('.card.mb-3');
     
+            // Function to show all projects
+            const showAllProjects = () => {
+                projects.forEach(project => {
+                    project.style.display = 'block';
+                });
+            };
+    
+            // Show all projects by default
+            showAllProjects();
+    
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const category = button.getAttribute('data-categoery');
     
-                    projects.forEach(project => {
-                        if (category === 'showall' || project.getAttribute('data-categoery') === category) {
-                            project.style.display = 'block';
-                        } else {
-                            project.style.display = 'none';
-                        }
-                    });
+                    // If no category is selected or "showall" is clicked, show all projects
+                    if (!category || category === 'showall') {
+                        showAllProjects();
+                    } else {
+                        // Filter projects based on category
+                        projects.forEach(project => {
+                            if (project.getAttribute('data-categoery') === category) {
+                                project.style.display = 'block';
+                            } else {
+                                project.style.display = 'none';
+                            }
+                        });
+                    }
                 });
             });
         });
     </script>
+    
     
 </body>
 </html>
