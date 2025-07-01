@@ -218,7 +218,7 @@
         // Define your project data
         const projects = {
             1: {
-                title: "Revit Add-ins - Project Details",
+                title: "Revit Add-ins",
                 image: "../images/RevitAddIns.png", // Corrected path
                 what: `
                     <ul>
@@ -237,7 +237,7 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-city'></i> Bim Model"]
                     B["<i class='fa-solid fa-worm'></i> Dynamo Script<br>Extract data from Bim models"]
                     C["<i class='fa-solid fa-file-excel'></i> Excel<br>Storage data in Excel"]
@@ -253,7 +253,7 @@
                 `
             },
             2: {
-                title: "Bim model Quality Control - Project Details",
+                title: "Bim model Quality Control",
                 image: "../images/BimModelBQC.png", // Corrected path
                 what: `
                     <ul>
@@ -272,19 +272,23 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-cube'></i> BIM Model"]
                     B["<i class='fa-solid fa-magnifying-glass'></i> Quality Check Scripts"]
                     C["<i class='fa-solid fa-chart-bar'></i> Quality Dashboard"]
                     D["<i class='fa-solid fa-check'></i> Resolved Issues"]
 
-                    A --> B
-                    B --> C
-                    C --> D
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
                 `
             },
             3: {
-                title: "Autodesk Construction Cloud Handbook - Project Details",
+                title: "Autodesk Construction Cloud Handbook",
                 image: "../images/ACC Handbook.png", // Corrected path
                 what: `
                     <ul>
@@ -303,7 +307,7 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-book'></i> ACC Handbook Creation"]
                     B["<i class='fa-solid fa-clipboard'></i> Information Gathering"]
                     C["<i class='fa-solid fa-pencil'></i> Content Writing"]
@@ -311,15 +315,21 @@
                     E["<i class='fa-solid fa-users'></i> Internal Review"]
                     F["<i class='fa-solid fa-check-double'></i> Final Publication"]
 
-                    A --> B
-                    B --> C
-                    C --> D
-                    D --> E
-                    E --> F
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+                    E e5@--> F
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
+                    e5@{animation: fast }
                 `
             },
             4: {
-                title: "Content Catalog (Revit Family Storage) - Project Details",
+                title: "Content Catalog (Revit Family Storage)",
                 image: "../images/ContentCatalog.png", // Corrected path
                 what: `
                     <ul>
@@ -338,21 +348,26 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-folder'></i> Revit Families"]
                     B["<i class='fa-solid fa-database'></i> Metadata Database"]
                     C["<i class='fa-solid fa-cloud'></i> Cloud Storage"]
                     D["<i class='fa-solid fa-globe'></i> Web Interface"]
                     E["<i class='fa-solid fa-download'></i> User Download"]
 
-                    A --> B
-                    B --> C
-                    C --> D
-                    D --> E
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
                 `
             },
             5: {
-                title: "Enneüs Heermabrug Bridge Modelling - Project Details",
+                title: "Enneüs Heermabrug Bridge Modelling",
                 image: "../images/BicycleBridge.jpg", // Corrected path
                 what: `
                     <ul>
@@ -371,21 +386,26 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-file-lines'></i> Design Drawings"]
                     B["<i class='fa-solid fa-building'></i> Revit Modeling"]
                     C["<i class='fa-solid fa-arrows-split-up-and-down'></i> Clash Detection"]
                     D["<i class='fa-solid fa-eye'></i> Visualization"]
                     E["<i class='fa-solid fa-check-circle'></i> Final Model"]
 
-                    A --> B
-                    B --> C
-                    C --> D
-                    D --> E
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
                 `
             },
             6: {
-                title: "Google Sheet Export Multiple PDF - Project Details",
+                title: "Google Sheet Export Multiple PDF",
                 image: "../images/GoogleSheetExportPDF.jpg", // Corrected path
                 what: `
                     <ul>
@@ -404,19 +424,23 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-file-excel'></i> Google Sheet Data"]
                     B["<i class='fa-solid fa-code'></i> Google Apps Script"]
                     C["<i class='fa-solid fa-file-pdf'></i> Generate PDF (per row)"]
                     D["<i class='fa-solid fa-folder-open'></i> Save to Google Drive"]
 
-                    A --> B
-                    B --> C
-                    C --> D
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
                 `
             },
             7: {
-                title: "PSM Donmueang (CSA) - Project Details",
+                title: "PSM Donmueang (CSA)",
                 image: "../images/PSMDonmueang.jpg", // Corrected path
                 what: `
                     <ul>
@@ -435,7 +459,7 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-building'></i> Architectural Design"]
                     B["<i class='fa-solid fa-hard-hat'></i> Structural Design"]
                     C["<i class='fa-solid fa-road'></i> Civil Design"]
@@ -443,15 +467,21 @@
                     E["<i class='fa-solid fa-arrows-split-up-and-down'></i> Clash Detection"]
                     F["<i class='fa-solid fa-file-contract'></i> Federated Model"]
 
-                    A --> D
-                    B --> D
-                    C --> D
-                    D --> E
-                    E --> F
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+                    E e5@--> F
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
+                    e5@{animation: fast }
                 `
             },
             8: {
-                title: "Autodesk Tandem - Project Details",
+                title: "Autodesk Tandem",
                 image: "../images/AutodeskTandem.jpg", // Corrected path
                 what: `
                     <ul>
@@ -470,21 +500,26 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-cube'></i> BIM Models"]
                     B["<i class='fa-solid fa-wifi'></i> IoT Data"]
                     C["<i class='fa-solid fa-cloud'></i> Autodesk Tandem"]
                     D["<i class='fa-solid fa-chart-line'></i> Operational Insights"]
                     E["<i class='fa-solid fa-gears'></i> Optimized FM"]
 
-                    A --> C
-                    B --> C
-                    C --> D
-                    D --> E
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
                 `
             },
             9: {
-                title: "FM-Dusit - Project Details",
+                title: "FM-Dusit",
                 image: "../images/FM-Dusit.jpg", // Corrected path
                 what: `
                     <ul>
@@ -503,22 +538,26 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-building-user'></i> Occupants"]
                     B["<i class='fa-solid fa-wrench'></i> Maintenance Requests"]
                     C["<i class='fa-solid fa-server'></i> Database & Backend"]
                     D["<i class='fa-solid fa-desktop'></i> Web Application"]
                     E["<i class='fa-solid fa-clipboard-check'></i> FM Operations"]
 
-                    A --> B
-                    B --> D
-                    D --> C
-                    C --> D
-                    D --> E
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
                 `
             },
             10: {
-                title: "Autodesk COBie - Project Details",
+                title: "Autodesk COBie",
                 image: "../images/Cobie.jpg", // Corrected path
                 what: `
                     <ul>
@@ -537,19 +576,23 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-cube'></i> BIM Model"]
                     B["<i class='fa-solid fa-file-export'></i> COBie Export Tool"]
                     C["<i class='fa-solid fa-table'></i> COBie Spreadsheet"]
                     D["<i class='fa-solid fa-handshake'></i> Handover to FM"]
 
-                    A --> B
-                    B --> C
-                    C --> D
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
                 `
             },
             11: {
-                title: "Point Cloud: Sathorn 21 - Project Details",
+                title: "Point Cloud: Sathorn 21",
                 image: "../images/PointCloud.jpg", // Corrected path
                 what: `
                     <ul>
@@ -568,21 +611,26 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-camera'></i> Laser Scan"]
                     B["<i class='fa-solid fa-cloud'></i> Raw Point Cloud"]
                     C["<i class='fa-solid fa-scissors'></i> Data Processing & Cleaning"]
                     D["<i class='fa-solid fa-cube'></i> BIM Model Creation"]
                     E["<i class='fa-solid fa-check'></i> As-Built Documentation"]
 
-                    A --> B
-                    B --> C
-                    C --> D
-                    D --> E
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+                    D e4@--> E
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+                    e4@{animation: fast }
                 `
             },
             12: {
-                title: "ACC Dashboard Status Document - Project Details",
+                title: "ACC Dashboard Status Document",
                 image: "../images/ACC_Dashboard.jpg", // Corrected path
                 what: `
                     <ul>
@@ -601,15 +649,19 @@
                     </ul>
                 `,
                 method: `
-                    flowchart LR
+                    flowchart TB
                     A["<i class='fa-solid fa-file-lines'></i> ACC Documents"]
                     B["<i class='fa-solid fa-chart-line'></i> Data Collection (ACC Insight)"]
                     C["<i class='fa-solid fa-gauge-high'></i> Dashboard Visualization"]
                     D["<i class='fa-solid fa-users'></i> Team Collaboration"]
 
-                    A --> B
-                    B --> C
-                    C --> D
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
                 `
             }
         };
