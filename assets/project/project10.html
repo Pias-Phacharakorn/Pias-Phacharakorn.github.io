@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PointCloud</title>
+    <!-- favicon (optional) -->
+    <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/projectstyle.css" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Add a back button -->
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <!-- Project Title -->
+        <h1 class="project-title">Point Cloud</h1>
+        
+        <!-- Project Image -->
+        <figure class="project-detail-img-container">
+            <img src="../images/PointCloud.jpg" alt="Point Cloud" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
+
+        <!-- What Section -->
+        <div class="section">
+            <h2 class="section-header">What?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Processed and analyzed point cloud data for the Sathorn 21 project.</li>
+                    <li>Converted raw scan data into usable 3D models for existing conditions.</li>
+                    <li>Used point clouds for accurate measurements, clash detection, and as-built documentation.</li>
+                    <li>Aimed to provide precise spatial information for renovation and design work.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- How Section -->
+        <div class="section">
+            <h2 class="section-header">How?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Utilized Navisworks and Solibri for clash detection and model review.</li>
+                    <li>Developed Python scripts with Revit API for automated data extraction and validation.</li>
+                    <li>Integrated Power BI for interactive quality control dashboards.</li>
+                    <li>Established clear communication protocols for issue tracking and resolution.</li>
+                </ul>
+            </div>  
+        </div>
+        <!-- Method Section -->
+        <div class="section">
+            <h2 class="section-header">Method</h2>
+            <div class="mermaid">
+                flowchart TB
+                A["<i class='fa-solid fa-camera'></i> Laser Scan"]
+                B["<i class='fa-solid fa-cloud'></i> Raw Point Cloud"]
+                C["<i class='fa-solid fa-scissors'></i> Data Processing & Cleaning"]
+                D["<i class='fa-solid fa-cube'></i> BIM Model Creation"]
+                E["<i class='fa-solid fa-check'></i> As-Built Documentation"]
+
+                A e1@--> B
+                B e2@--> C
+                C e3@--> D
+                D e4@--> E
+
+                e1@{animation: fast }
+                e2@{animation: fast }
+                e3@{animation: fast }
+                e4@{animation: fast }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

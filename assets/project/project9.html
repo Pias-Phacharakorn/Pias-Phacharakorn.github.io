@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutodeskCobie</title>
+    <!-- favicon (optional) -->
+    <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/projectstyle.css" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Add a back button -->
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <!-- Project Title -->
+        <h1 class="project-title">Autodesk COBie</h1>
+        
+        <!-- Project Image -->
+        <figure class="project-detail-img-container">
+            <img src="../images/Cobie.jpg" alt="Autodesk COBie" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
+
+        <!-- What Section -->
+        <div class="section">
+            <h2 class="section-header">What?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Implemented COBie (Construction Operations Building Information Exchange) data delivery for projects.</li>
+                    <li>Extracted and organized asset information from BIM models into COBie-compliant formats.</li>
+                    <li>Ensured data quality and consistency for handover to facility management teams.</li>
+                    <li>Aimed to provide structured, usable data for building operations and maintenance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- How Section -->
+        <div class="section">
+            <h2 class="section-header">How?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Utilized Revit and other BIM software to populate COBie parameters.</li>
+                    <li>Used specialized tools or scripts to export COBie data in spreadsheet format.</li>
+                    <li>Performed data validation and cleansing to ensure accuracy.</li>
+                    <li>Collaborated with project teams to define COBie requirements early in the project lifecycle.</li>
+                </ul>
+            </div>  
+        </div>
+        <!-- Method Section -->
+        <div class="section">
+            <h2 class="section-header">Method</h2>
+            <div class="mermaid">
+                    flowchart TB
+                    A["<i class='fa-solid fa-cube'></i> BIM Model"]
+                    B["<i class='fa-solid fa-file-export'></i> COBie Export Tool"]
+                    C["<i class='fa-solid fa-table'></i> COBie Spreadsheet"]
+                    D["<i class='fa-solid fa-handshake'></i> Handover to FM"]
+
+                    A e1@--> B
+                    B e2@--> C
+                    C e3@--> D
+
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
