@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n_Automation</title>
+    <!-- favicon (optional) -->
+    <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/projectstyle.css" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Add a back button -->
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <!-- Project Title -->
+        <h1 class="project-title">E-mail Summary AI Agent</h1>
+        
+        <!-- Project Image -->
+        <figure class="project-detail-img-container">
+            <img src="../images/n8n_EmailSummary.jpg" alt="ACC Dashboard Status Document" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
+
+        <!-- What Section -->
+        <div class="section">
+            <h2 class="section-header">What?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Developed an end-to-end automation workflow on the n8n platform to process incoming emails, summarize their content using Generative AI, and broadcast the summary to a communication channel.</li>
+                    <li>This system acts as an AI Agent, significantly reducing time spent manually reading emails by providing concise, actionable summaries focused on key information.</li>
+                    <li>Improved operational efficiency by ensuring users receive real-time notifications of important email content directly in a preferred communication tool (e.g., Slack, Line, or Teams).</li>
+            </div>
+        </div>
+
+        <!-- How Section -->
+        <div class="section">
+            <h2 class="section-header">How?</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Utilized the Email Trigger Node in n8n to monitor a mailbox for new messages based on a scheduled interval.</li>
+                    <li>Used Function Nodes or Data Manipulation Nodes to parse the AI's response and format the summary notification with key details.</li>
+                    <li>Sent the final, formatted summary message using a dedicated Notification Node (e.g., Telegram, Line) for instant user awareness.</li>
+                    <li>Integrated with an LLM (Large Language Model) API (e.g., OpenAI, Gemini) via an HTTP Request or dedicated AI node, passing the email body along with a System Prompt for high-quality summarization.</li>
+                </ul>
+            </div>  
+        </div>
+        <!-- Method Section -->
+        <div class="section">
+            <h2 class="section-header">Method</h2>
+            <div class="mermaid">
+                    flowchart TB
+                        A["<i class='fa-solid fa-envelope-open-text'></i> Email Trigger (New Mail)"]
+                        B["<i class='fa-solid fa-filter'></i> Filter (Important/Specific Sender)"]
+                        C["<i class='fa-solid fa-robot'></i> LLM Node (Summarize E-mail)"]
+                        D["<i class='fa-solid fa-message'></i> Notification Node (Telegram/Line Notify)"]
+
+                        A e1@--> B
+                        B e2@--> C
+                        C e3@--> D
+
+                        e1@{animation: fast }
+                        e2@{animation: fast }
+                        e3@{animation: fast }
+            </div>
+        </div>
+
+                <div class="section">
+           <h2 class="section-header">Add-on Feature: AI Email Categorization & Labeling</h2>
+            <div class="section-content">
+                <p>Add-on simple summarization, this workflow can be extended into a smart email management system by leveraging AI for automatic Categorization and Labeling:</p>
+                    <ul>
+                        <li>AI Categorization: The LLM Node analyzes the email content to dynamically assign a category (e.g., "Sales Lead," "IT Support," "Vendor Invoice") based on predefined instructions (Prompting).</li>
+                        <li>Automated Labeling: Once the category is identified, the workflow uses an Email/Gmail Node to automatically apply a corresponding label/tag to the original email in the inbox, drastically improving inbox organization and searchability.</li>
+                        <li>Enhanced Routing: The AI-derived category can be used as a conditional step to route the summary notifications to specific teams or channels, ensuring the right person sees the information instantly.</li>
+                    </ul>
+                </div>
+            </div>
+
+                    <div class="section">
+                <h2 class="section-header">Example</h2>
+            </div>
+
+                    <figure class="project-detail-img-container">
+                <img src="../images/n8n_LabelEmail.jpg" alt="n8n Email Summary Workflow Example" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+            </figure>
+
+         </div>
+</body>
+</html>
