@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bim model Quality Control</title>
+    <title>BIM_Dashboard</title>
     <!-- favicon (optional) -->
     <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
         </a>
 
         <!-- Project Title -->
-        <h1 class="project-title">Bim model Quality Control</h1>
+        <h1 class="project-title">BIM Model Data and Insight Dashboard</h1>
         
         <!-- Project Image -->
         <figure class="project-detail-img-container">
-            <img src="../images/BimModelBQC.png" alt="Bim model Quality Control Project Image" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+            <img src="../images/ACC_DataConnector_PowerBI.jpg" alt="ACC Dashboard Status Document" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
         </figure>
 
         <!-- What Section -->
@@ -36,10 +36,10 @@
             <h2 class="section-header">What?</h2>
             <div class="section-content">
                 <ul>
-                    <li>Implemented quality control checks for BIM models to ensure accuracy and compliance with standards.</li>
-                    <li>Developed automated scripts to identify and report model inconsistencies.</li>
-                    <li>Created dashboards for visualizing model quality metrics.</li>
-                    <li>Collaborated with design teams to resolve identified issues.</li>
+                    <li>Developed a Business Intelligence Dashboard using Power BI to visualize data extracted directly from a Building Information Model.</li>
+                    <li>The dashboard provides high-level overview of model data and facilitates the discovery of actionable insights.</li>
+                    <li>Focused on key areas like quantity takeoff, element status tracking, cost analysis, or scheduling metrics derived from the BIM model.</li>
+                    <li>Aimed to enhance decision-making by making complex BIM data accessible and visual for project stakeholders.</li>
                 </ul>
             </div>
         </div>
@@ -49,10 +49,10 @@
             <h2 class="section-header">How?</h2>
             <div class="section-content">
                 <ul>
-                    <li>Utilized Navisworks and Solibri for clash detection and model review.</li>
-                    <li>Developed Python scripts with Revit API for automated data extraction and validation.</li>
-                    <li>Integrated Power BI for interactive quality control dashboards.</li>
-                    <li>Established clear communication protocols for issue tracking and resolution.</li>
+                    <li>Extracted data from the BIM model using appropriate tools (e.g., Revit/Navisworks APIs, specific export formats, or third-party connectors).</li>
+                    <li>Processed and cleaned the raw model data to ensure quality and relevance, selecting only the necessary parameters (e.g., type, material, volume, status).</li>
+                    <li>Integrated the cleaned data into Power BI, establishing relationships and necessary calculations.</li>
+                    <li>Designed and developed an interactive dashboard with visualizations to transform the data into meaningful insights.</li>
                 </ul>
             </div>  
         </div>
@@ -60,21 +60,32 @@
         <div class="section">
             <h2 class="section-header">Method</h2>
             <div class="mermaid">
-                flowchart TB
-                A["<i class='fa-solid fa-city'></i> Bim Model"]
-                B["<i class='fa-solid fa-worm'></i> Dynamo Script<br>Extract data from Bim models"]
-                C["<i class='fa-solid fa-file-excel'></i> Excel<br>Storage data in Excel"]
-                D["<i class='fa-solid fa-desktop'></i> PowerBI<br>Query & Visualize Data"]
+                    flowchart TB
+                    A["<i class='fa-solid fa-cube'></i> Extract Data from BIM Model"]
+                    B["<i class='fa-solid fa-scissors'></i> Clean & Select Data (Focus on required parts)"]
+                    C["<i class='fa-solid fa-database'></i> Load Data into Power BI"]
+                    D["<i class='fa-solid fa-chart-bar'></i> Create Dashboard & Find Insight"]
 
-                A e1@--> B
-                B e2@--> C
-                C e3@--> D
+                    A e1@--> B
+                    B e2@--> C 
+                    C e3@--> D
 
-                e1@{animation: fast }
-                e2@{animation: fast }
-                e3@{animation: fast }
+                    e1@{animation: fast }
+                    e2@{animation: fast }
+                    e3@{animation: fast }
             </div>
         </div>
+
+        <!-- Example Section -->
+        <div class="section">
+            <h2 class="section-header">Example</h2>
+        </div>
+
+        <!-- Exmaple Gif. -->
+        <figure class="project-detail-img-container">
+            <img src="../images/gif/MIS1_DataConnect_PowerBI.gif" alt="RevitAddIns" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
+
     </div>
 </body>
 </html>
