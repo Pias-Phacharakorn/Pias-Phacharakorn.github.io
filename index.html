@@ -17,6 +17,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    // ให้หน้า Portfolio Show เป็น default
+    window.addEventListener('load', function() {
+      // ตรวจสอบว่าไม่มี hash ใน URL
+      if (!window.location.hash) {
+        // รอให้ DOM โหลดเสร็จสมบูรณ์
+        setTimeout(function() {
+          // ซ่อน article ทั้งหมด
+          const allArticles = document.querySelectorAll('article[data-page]');
+          allArticles.forEach(article => {
+            article.classList.remove('active');
+          });
+          
+          // แสดง article portfolio
+          const portfolioArticle = document.querySelector('article[data-page="portfolio"]');
+          if (portfolioArticle) {
+            portfolioArticle.classList.add('active');
+          }
+          
+          // เปลี่ยนสถานะปุ่ม navbar
+          const allNavLinks = document.querySelectorAll('.navbar-link');
+          allNavLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          const portfolioNavLink = Array.from(allNavLinks).find(
+            link => link.textContent.trim() === 'Portfolio'
+          );
+          if (portfolioNavLink) {
+            portfolioNavLink.classList.add('active');
+          }
+        }, 100); // รอ 100ms ให้ script.js โหลดเสร็จก่อน
+      }
+    });
+  </script>
 </head>
 
 <body class="dark-theme">
