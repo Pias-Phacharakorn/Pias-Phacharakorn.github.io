@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bim model Quality Control</title>
+    <title>PointCloud</title>
     <!-- favicon (optional) -->
     <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
         </a>
 
         <!-- Project Title -->
-        <h1 class="project-title">Bim model Quality Control</h1>
+        <h1 class="project-title">Point Cloud</h1>
         
         <!-- Project Image -->
         <figure class="project-detail-img-container">
-            <img src="../images/BimModelBQC.png" alt="Bim model Quality Control Project Image" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+            <img src="../images/10_PointCloud/PointCloud.jpg" alt="Point Cloud" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
         </figure>
 
         <!-- What Section -->
@@ -36,10 +36,10 @@
             <h2 class="section-header">What?</h2>
             <div class="section-content">
                 <ul>
-                    <li>Implemented quality control checks for BIM models to ensure accuracy and compliance with standards.</li>
-                    <li>Developed automated scripts to identify and report model inconsistencies.</li>
-                    <li>Created dashboards for visualizing model quality metrics.</li>
-                    <li>Collaborated with design teams to resolve identified issues.</li>
+                    <li>Processed and analyzed point cloud data for the Sathorn 21 project.</li>
+                    <li>Converted raw scan data into usable 3D models for existing conditions.</li>
+                    <li>Used point clouds for accurate measurements, clash detection, and as-built documentation.</li>
+                    <li>Aimed to provide precise spatial information for renovation and design work.</li>
                 </ul>
             </div>
         </div>
@@ -61,20 +61,39 @@
             <h2 class="section-header">Method</h2>
             <div class="mermaid">
                 flowchart TB
-                A["<i class='fa-solid fa-city'></i> Bim Model"]
-                B["<i class='fa-solid fa-worm'></i> Dynamo Script<br>Extract data from Bim models"]
-                C["<i class='fa-solid fa-file-excel'></i> Excel<br>Storage data in Excel"]
-                D["<i class='fa-solid fa-desktop'></i> PowerBI<br>Query & Visualize Data"]
+                A["<i class='fa-solid fa-camera'></i> Laser Scan"]
+                B["<i class='fa-solid fa-cloud'></i> Raw Point Cloud"]
+                C["<i class='fa-solid fa-scissors'></i> Data Processing & Cleaning"]
+                D["<i class='fa-solid fa-cube'></i> BIM Model Creation"]
+                E["<i class='fa-solid fa-check'></i> As-Built Documentation"]
 
                 A e1@--> B
                 B e2@--> C
                 C e3@--> D
+                D e4@--> E
 
                 e1@{animation: fast }
                 e2@{animation: fast }
                 e3@{animation: fast }
+                e4@{animation: fast }
             </div>
         </div>
+
+        <!-- Example Section -->
+        <div class="section">
+            <h2 class="section-header">Example</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Combinr Point Cloud and Bim model to verify the model's validity against the real world</li>
+                </ul>
+        </div>
+        <!-- Exmaple Gif. -->
+        <figure class="project-detail-img-container">
+            <img src="../images/10_PointCloud/_PointCloudFloor.jpg" alt="_PointCloudFloor" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
+        <figure class="project-detail-img-container">
+            <img src="../images/10_PointCloud/_PointCloudRoom.jpg" alt="_PointCloudRoom" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 30px;" />
+        </figure>
     </div>
 </body>
 </html>
