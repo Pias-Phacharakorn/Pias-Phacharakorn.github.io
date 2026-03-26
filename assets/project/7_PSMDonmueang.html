@@ -17,6 +17,9 @@
     </script>
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div data-position="top" class="sp-reading-progress-bar" id="readingProgressBar" style="width: 0%;"></div>
+
     <div class="container">
         <!-- Add a back button -->
         <a href="../../index.html" class="back-button">
@@ -82,5 +85,16 @@
             </div>
         </div>
     </div>
+
+    <!-- Reading Progress Bar Script -->
+    <script>
+        const progressBar = document.getElementById('readingProgressBar');
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
 </body>
 </html>

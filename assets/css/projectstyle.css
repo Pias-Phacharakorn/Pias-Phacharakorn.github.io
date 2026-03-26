@@ -1,4 +1,18 @@
 
+/* ===== Reading Progress Bar ===== */
+.sp-reading-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(90deg, #6366f1, #818cf8, #a5b4fc);
+    z-index: 9999;
+    border-radius: 0 2px 2px 0;
+    transition: width 0.08s linear;
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
 /* General Reset & Body */
 * {
     margin: 0;
