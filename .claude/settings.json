@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "pias-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Pias-Phacharakorn/Central-Skill-PIAS"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "pias-workflow@pias-skills": true
+  }
+}
