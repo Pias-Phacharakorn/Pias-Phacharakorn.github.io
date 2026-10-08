@@ -8,6 +8,7 @@
     }
   },
   "enabledPlugins": {
-    "pias-workflow@pias-skills": true
+    "pias-workflow@pias-skills": true,
+    "usage-bar@pias-skills": true
   }
 }
